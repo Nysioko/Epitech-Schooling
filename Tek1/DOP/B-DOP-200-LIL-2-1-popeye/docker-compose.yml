@@ -1,0 +1,68 @@
+version: "3.3"
+networks:
+  poll-tier:
+  result-tier:
+  back-tier:
+volumes:
+  db-data:
+services:
+  redis:
+    image: redis
+    container_name: redis
+    restart: always
+    expose:
+      - "6379"
+    ports:
+      - "6379:6379"
+    networks:
+      - back-tier
+      - poll-tier
+  db:
+    image: postgres:13.2
+    container_name: db
+    restart: always
+    environment:
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=password"
+      - CREATE_TABLE=votes
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - "./schema.sql:/docker-entrypoint-initdb.d/init.sql"
+    networks:
+      - result-tier
+      - back-tier
+    ports:
+        - "5432:5432"
+  poll:
+    build: ./poll
+    container_name: poll
+    restart: always
+    environment:
+      - 0.0.0.0
+    networks:
+      - poll-tier
+    links:
+      - redis
+      - db
+    depends_on:
+      - redis
+    ports:
+      - "5000:80"
+  worker:
+    build: ./worker
+    container_name: worker
+    restart: always
+    environment:
+      - 0.0.0.0
+    networks:
+      - back-tier
+  result:
+    build: ./result
+    container_name: result
+    restart: always
+    environment:
+      - 0.0.0.0
+    networks:
+      - result-tier
+    ports:
+      - "5001:80"

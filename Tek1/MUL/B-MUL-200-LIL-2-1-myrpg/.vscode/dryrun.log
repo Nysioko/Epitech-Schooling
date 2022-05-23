@@ -1,0 +1,26 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/nysioko/Documents/Programming/Epitech/Epitech-Schooling/Tek1/MUL/B-MUL-200-LIL-2-1-myrpg'
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/main.o src/main.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/func_useful.o src/func_useful.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/save.o src/save.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/create/create1.o src/create/create1.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/create/create2.o src/create/create2.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/create/destroy.o src/create/destroy.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/create/cynthia.o src/create/cynthia.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/create/load.o src/create/load.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/inputs/inputs.o src/inputs/inputs.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/inputs/htp.o src/inputs/htp.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/inputs/menu.o src/inputs/menu.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/inputs/pause.o src/inputs/pause.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/inputs/select.o src/inputs/select.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/inputs/play.o src/inputs/play.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/inputs/play2.o src/inputs/play2.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/inputs/dialog.o src/inputs/dialog.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/display/display.o src/display/display.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/display/display2.o src/display/display2.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/display/player.o src/display/player.c
+cc -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W   -c -o src/fight/fight.o src/fight/fight.c
+make -C lib/my
+gcc src/main.o src/func_useful.o src/save.o src/create/create1.o src/create/create2.o src/create/destroy.o src/create/cynthia.o src/create/load.o src/inputs/inputs.o src/inputs/htp.o src/inputs/menu.o src/inputs/pause.o src/inputs/select.o src/inputs/play.o src/inputs/play2.o src/inputs/dialog.o src/display/display.o src/display/display2.o src/display/player.o src/fight/fight.o -o my_rpg -I./include -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm -L lib/my/ -lmy -Wall -Wextra -W
+make: Leaving directory '/home/nysioko/Documents/Programming/Epitech/Epitech-Schooling/Tek1/MUL/B-MUL-200-LIL-2-1-myrpg'
+ 

@@ -1,0 +1,14 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/nysioko/Documents/Programming/Epitech/Epitech-Schooling/Tek1/PSU/B-PSU-200-LIL-2-1-mysokoban'
+cc -I./include -I./lib -W -Wall -Wextra -lncurses   -c -o src/winlose.o src/winlose.c
+cc -I./include -I./lib -W -Wall -Wextra -lncurses   -c -o src/main.o src/main.c
+cc -I./include -I./lib -W -Wall -Wextra -lncurses   -c -o src/map_checker.o src/map_checker.c
+cc -I./include -I./lib -W -Wall -Wextra -lncurses   -c -o src/open_file.o src/open_file.c
+cc -I./include -I./lib -W -Wall -Wextra -lncurses   -c -o src/move.o src/move.c
+cc -I./include -I./lib -W -Wall -Wextra -lncurses   -c -o src/map_center.o src/map_center.c
+cc -I./include -I./lib -W -Wall -Wextra -lncurses   -c -o src/init.o src/init.c
+cc -I./include -I./lib -W -Wall -Wextra -lncurses   -c -o src/moveplusplus.o src/moveplusplus.c
+make -C lib/my
+gcc src/winlose.o src/main.o src/map_checker.o src/open_file.o src/move.o src/map_center.o src/init.o src/moveplusplus.o -o my_sokoban -I./include -I./lib -W -Wall -Wextra -lncurses -lm -L./lib -lmy
+make: Leaving directory '/home/nysioko/Documents/Programming/Epitech/Epitech-Schooling/Tek1/PSU/B-PSU-200-LIL-2-1-mysokoban'
+ 
